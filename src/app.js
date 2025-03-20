@@ -12,6 +12,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
 const mongoString = process.env.DATABASE_URL;
+mongoose.set("strictQuery", true);
 mongoose.connect(mongoString);
 const database = mongoose.connection;
 database.on("error", (error) => {
