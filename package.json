@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node ./functions/app.js",
-    "build": "netlify deploy --prod",
-    "build-dev": "NODE_ENV=development webpack --mode development --watch",
-    "dev": "NODE_ENV=development node server-local.js",
-    "dev-watch": "NODE_ENV=development nodemon --exec node ./functions/app.js"
+    "start": "nodemon app.js",
+    "build": "netlify deploy --prod"
     
   },
   "author": "",

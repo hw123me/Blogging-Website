@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const serverless = require("serverless-http");
 const mongoose = require("mongoose");
-const routes = require("../routes/allRoutes");
+const routes = require("./routes/allRoutes");
 const app = express();
 const path = require("path");
 const ejs = require("ejs");
