@@ -1,4 +1,9 @@
 [build]
-    functions = "functions"
+    functions = "functions",
+    publish = "public"  # Static assets to be served by Netlify's CDN. Folder defaults to public
 [dev]
   publish = "views"
+[functions]
+  included_files = [
+    "views/**"  # Include all files in static/views for server-side access
+  ]
