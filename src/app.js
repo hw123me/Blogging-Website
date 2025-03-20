@@ -1,8 +1,7 @@
 require("dotenv").config();
 const express = require("express");
-const serverless = require("serverless-http");
 const mongoose = require("mongoose");
-const routes = require("./routes/allRoutes");
+const routes = require("../routes/allRoutes");
 const app = express();
 const path = require("path");
 const ejs = require("ejs");
@@ -24,4 +23,3 @@ app.listen(process.env.PORT || 8000, () => {
 });
 
 app.use(routes);
-module.exports.handler = serverless(app);
